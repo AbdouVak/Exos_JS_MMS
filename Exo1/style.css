@@ -1,0 +1,16 @@
+.carre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    width: 200px;
+    height: 200px;
+    padding: 50px;
+    margin: 5px;
+
+    background-color: rgb(15, 84, 187);
+    color: white;    
+    font-size: 70px;
+}
