@@ -1,0 +1,40 @@
+#board{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 800px;
+}
+
+.carre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    width: 200px;
+    height: 200px;
+    padding: 50px;
+    margin: 5px;
+
+    background-color: rgb(57, 138, 10);
+    color: white;    
+    font-size: 70px;
+    
+    cursor: pointer;
+}
+
+.box-clicked{
+    animation: appear 1s;
+}
+
+@keyframes appear{
+    form{
+        transform: scale(1) rotate(0deg);
+        background-color: rgb(57, 138, 10);
+    }
+    to{
+        transform: scale(0.9) rotate(360deg);
+        background-color: #a30b0b;
+    }
+}
