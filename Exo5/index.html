@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <main>
+            <div id="box">
+                <h1>Valeur en euros</h1>
+                <div id="button"><input type="text" id="ValeuE" name="ValeuE"></div>
+                <div id="texte"></div>
+            </div>
+        </main>
+
+        <script>
+            let texte =document.getElementById("texte");
+            let ValeurE =document.getElementById("ValeuE");
+
+            ValeurE.addEventListener('change',function(){
+                var ValeurE =document.getElementById("ValeuE").value;
+                ValeurE = ValeurE * 6.55957;
+                texte.innerText = ValeurE+" francs";
+            });
+            
+        </script>
+    </body>
+</html>
