@@ -1,0 +1,59 @@
+*{
+    margin : 0;
+    padding : 0;
+    vertical-align: top;
+    font-family: "Tahoma ","sans-serif";
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("morpion.png");
+}
+
+#board{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 160px;
+    width: 800px;
+}
+
+#text{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 40px;
+    color: aliceblue;
+
+}
+
+.caseM{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+
+    background-color: rgba(255, 255, 255, 0.521);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.X-clicked{
+    color:  rgb(158, 9, 9);
+    font-size: 70px;
+    cursor: not-allowed;
+}
+
+.O-clicked{
+    color: #0529cc;
+    font-size: 70px;
+    cursor: not-allowed;
+}
