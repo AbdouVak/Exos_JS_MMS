@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Document</title>
+    </head>
+
+    <body>
+        <main>
+            <div id="board"></div>
+            <div id="text"></div>
+        </main>
+        
+
+        <script>
+            const caseM = document.createElement("div");
+            caseM.classList.add("caseM");
+
+            const board = document.querySelector("#board");
+            const text = document.getElementById("text");
+
+            let xTurn = true;
+            let nbTour = 0;
+
+            for(let i = 0; i < 9; i++){
+                
+                let newCaseM = caseM.cloneNode();
+                board.appendChild(newCaseM);
+
+                if(i==1){
+                    text.innerText = "La partie commence";
+                }
+
+                newCaseM.addEventListener("click",function(){
+                    if(newCaseM.classList.contains("X-clicked") || newCaseM.classList.contains("O-clicked")){
+                        console.log("deja chosie")
+                    }else if(xTurn == true ){
+                        const logoX = document.createElement("i");
+                        logoX.classList.add("fa-solid","fa-x"); 
+
+                        newCaseM.classList.add("X-clicked");
+                        newCaseM.appendChild(logoX);
+
+                        text.innerText = "C'est au tour de O";
+                        xTurn = false;
+                        nbTour= nbTour +1;
+
+                        if(nbTour == 9){
+                            text.innerText = "La partie est finie";
+                        }
+                    }else if(xTurn == false ){
+                        const logoO = document.createElement("i");
+                        logoO.classList.add("fa-solid","fa-o"); 
+
+                        newCaseM.appendChild(logoO);
+                        newCaseM.classList.add("O-clicked");
+                    
+                        text.innerText = "C'est au tour de X";
+                        xTurn = true;
+                        nbTour= nbTour +1;
+
+                        if(nbTour == 9){
+                            text.innerText = "La partie est finie";
+                        }
+                    }
+                });
+            };
+            
+
+        </script>
+    </body>
+</html>
