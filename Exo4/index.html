@@ -19,6 +19,7 @@
 
             const board = document.querySelector("#board");
 
+
             document.addEventListener("keydown",function(e){
             if (e.keyCode === 38) {
                 board.removeChild(board.lastChild);
@@ -29,7 +30,9 @@
                 let newPixel = pixel.cloneNode();
                 board.appendChild(newPixel);
                 newPixel.style.backgroundColor ='#' + Math.random().toString(16).substr(-6);
-                
+                newPixel.addEventListener("click",function(){
+                    newPixel.style.backgroundColor = "black";
+                })
             }
             });
 
