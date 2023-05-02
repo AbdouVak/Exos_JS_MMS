@@ -1,0 +1,23 @@
+*{
+    margin : 0;
+    padding : 0;
+    vertical-align: top;
+    font-family: "Tahoma ","sans-serif";
+}
+main{
+    display: flex;
+    justify-content: center;
+}
+
+#board{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 900px;
+}
+
+.pixel{
+    width: 60px;
+    height: 60px;
+    background-color: beige;
+}
