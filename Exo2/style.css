@@ -24,11 +24,23 @@
     cursor: pointer;
 }
 
-.box-clicked{
-    animation: appear 1s;
+.gtor{
+    
+    transform: scale(0.9);
+    animation: gtor 1s;
+    background-color: #a30b0b;
+    
 }
 
-@keyframes appear{
+.rtog{
+    
+    transform: scale(1) ;
+    animation: rtog 1s;
+    background-color: rgb(57, 138, 10);
+    
+}
+
+@keyframes gtor{
     form{
         transform: scale(1) rotate(0deg);
         background-color: rgb(57, 138, 10);
@@ -37,4 +49,17 @@
         transform: scale(0.9) rotate(360deg);
         background-color: #a30b0b;
     }
+}
+
+@keyframes rtog{
+    form{
+        transform: scale(0.9) rotate(0deg);
+        background-color: #a30b0b;
+    }
+    to{
+
+        transform: scale(1) rotate(360deg);
+        background-color: rgb(57, 138, 10);
+    }
+    
 }

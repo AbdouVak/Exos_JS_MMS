@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,19 +15,19 @@
 
     <script>
 
-        const carres = document.querySelectorAll(".carre");
+        const carre = document.querySelector(".carre");
+        const carreComputed = window.getComputedStyle(carre)
 
-        carres.forEach(carre => {
-            carre.addEventListener("click", function() {
-                alert("Class : "+carre.className+"\n"+
-                        "- Background color : "+ window.getComputedStyle(carre).backgroundColor+"\n"+
-                        "- Color : "+window.getComputedStyle(carre).color+"\n"+
-                        "- Height : "+window.getComputedStyle(carre).height+"\n"+
-                        "- Width : "+window.getComputedStyle(carre).width+"\n"+
-                        "- Display : "+window.getComputedStyle(carre).display+"\n"+
-                        "- Display : " + window.getComputedStyle(carre).fontFamily + " (" + window.getComputedStyle(carre).fontSize + ")" +"\n");
-            });
+        carre.addEventListener("click", function () {
+            alert("Class : " + carre.className + "\n" +
+                "- Background color : " + carreComputed.backgroundColor + "\n" +
+                "- Color : " + carreComputed.color + "\n" +
+                "- Height : " + carreComputed.height + "\n" +
+                "- Width : " + carreComputed.width + "\n" +
+                "- Display : " + carreComputed.display + "\n" +
+                "- Display : " + carreComputed.fontFamily + " (" + carreComputed.fontSize + ")" + "\n");
         });
+
     </script>
 
 </body>

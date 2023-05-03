@@ -37,7 +37,7 @@
 
                 newCaseM.addEventListener("click",function(){
                     if(newCaseM.classList.contains("X-clicked") || newCaseM.classList.contains("O-clicked")){
-                        console.log("deja chosie")
+                        alert("deja chosie")
                     }else if(xTurn == true ){
                         const logoX = document.createElement("i");
                         logoX.classList.add("fa-solid","fa-x"); 
@@ -47,11 +47,8 @@
 
                         text.innerText = "C'est au tour de O";
                         xTurn = false;
-                        nbTour= nbTour +1;
 
-                        if(nbTour == 9){
-                            text.innerText = "La partie est finie";
-                        }
+                       
                     }else if(xTurn == false ){
                         const logoO = document.createElement("i");
                         logoO.classList.add("fa-solid","fa-o"); 
@@ -61,11 +58,12 @@
                     
                         text.innerText = "C'est au tour de X";
                         xTurn = true;
-                        nbTour= nbTour +1;
-
-                        if(nbTour == 9){
-                            text.innerText = "La partie est finie";
-                        }
+                        
+                        
+                    }
+                    nbTour= nbTour +1;
+                    if(nbTour == 9){
+                        text.innerText = "La partie est finie";
                     }
                 });
             };
